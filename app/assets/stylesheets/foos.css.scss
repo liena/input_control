@@ -1,0 +1,29 @@
+@import 'variables';
+
+.inline-input-container{
+	height: 60px;
+	width: 280px;
+	padding: 10px;
+	color: $font-black;
+	background-color: $control-background-default;
+	.info-section{
+		height: 40px;
+		.current-selection{
+			font-weight: bold;
+		}
+		.value-options{
+			display: none;
+		}
+	}
+	.actions{
+		float: right;
+		color: $font-link-default;
+		padding-left: 10px;
+	}
+	.actions:hover{
+		background-color: $control-background-default;
+	}
+	.cancel, .save{
+		display: none;
+	}
+}

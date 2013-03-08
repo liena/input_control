@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">   
+    <script type="text/javascript" src="//use.typekit.net/mhu5dok.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <title>TEST</title>
+   	<%= stylesheet_link_tag    "application", :media => "all" %>
+ 	<%= javascript_include_tag "application" %>
+  	<%= csrf_meta_tags %>
+  </head>
+  <body>
+      <div id="container">
+        <section id="header"></section> 
+        <section id="content"><%= yield %></section>
+      </div>
+    <%=raw javascript_include_tag('application').gsub('.js', ".js?version=#{`git rev-list --max-count=1 HEAD`}") %>
+    <script type="text/javascript">
+      window.router = new TestApp.Routers.Main({
+        foo: <%=raw @foo.to_json.html_safe%>
+      });
+      Backbone.history.start();
+    </script>
+  </body>
+</html>
