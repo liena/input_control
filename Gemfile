@@ -27,6 +27,9 @@ group :development, :test, :local, :assets do
   # Ruby Testing.
     gem "rspec-rails", "~> 2.0"
     gem 'shoulda-matchers'
+
+  # Backbone Testing
+  	gem "jasmine"
 end
 
 gem 'jquery-rails'

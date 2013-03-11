@@ -11,9 +11,6 @@
 		.current-selection{
 			font-weight: bold;
 		}
-		.value-options{
-			display: none;
-		}
 	}
 	.actions{
 		float: right;
@@ -23,7 +20,7 @@
 	.actions:hover{
 		background-color: $control-background-default;
 	}
-	.cancel, .save{
+	.hide{
 		display: none;
 	}
 }

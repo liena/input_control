@@ -1,6 +1,6 @@
 <div class="info-section">
 	<label for="name-selection-list">joe: </label>
-	<select class="value-options" id="name-selection-list" name="name-selection-list">
+	<select class="value-options hide" id="name-selection-list" name="name-selection-list">
 		<% _.each(this.model.nameOptions.attributes, function(value){ %>
 			<option value=<%= value %>
 				<% if(value == foo.get("name")){ %>
@@ -12,6 +12,6 @@
 	</select>
 	<label class="current-selection">Unset</label>
 </div>
-<a href="javascript:void(0);" class="edit actions">Edit</a>
-<a href="javascript:void(0);" class="cancel actions">Cancel</a>
-<a href="javascript:void(0);" class="save actions">Save</a>
+<a href="#" class="edit actions">Edit</a>
+<a href="#" class="cancel hide actions">Cancel</a>
+<a href="#" class="save hide actions">Save</a>
