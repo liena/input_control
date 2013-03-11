@@ -3,14 +3,12 @@ describe('Input Control View', function(){
     beforeEach(function(){
         this.router = new TestApp.Routers.Main();
         this.server = sinon.fakeServer.create();
-        this.clock = sinon.useFakeTimers();
         foo = new TestApp.Models.Foo();
         inlineInputView = new TestApp.Views.Controls.InlineInput({model: foo});
         $('#test').html(inlineInputView.render().el);
     });
     afterEach(function () { 
         this.server.restore();
-        this.clock.restore(); 
         Backbone.history.stop();
     });
     describe('instantiation', function(){
@@ -32,7 +30,7 @@ describe('Input Control View', function(){
         });
     });
     describe('click event', function(){
-        it('should edit input value', function(){
+        it('should update UI on edit', function(){
             var saveButton = inlineInputView.$el.find("a.save");
             var cancelButton = inlineInputView.$el.find("a.cancel");
             var nameOptions = inlineInputView.$el.find("select.value-options");
