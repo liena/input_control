@@ -1,5 +1,10 @@
 class Foo < ActiveRecord::Base
   attr_accessible :name
+  validates_presence_of :name
+
+  def self.possible_names
+    ["Vladlena", "Shumilo", "Ruby", "Rails"] 
+  end
 end
 
 #Generated with rails generate scaffold Foo name:string value:string

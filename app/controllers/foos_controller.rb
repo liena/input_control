@@ -1,5 +1,5 @@
 class FoosController < ApplicationController
-  respond_to :html, :json
+  respond_to :json
 
   #GET
   def index
@@ -33,8 +33,8 @@ class FoosController < ApplicationController
     respond_with foo
   end
 
+  # GET
   def possible_names
-    custom_names = ["Vladlena", "Shumilo", "Ruby", "Rails"]
-    respond_with custom_names
+    respond_with Foo.possible_names
   end
 end

@@ -22,8 +22,11 @@ group :development, :test, :local, :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
+
+  # Ruby Testing.
+    gem "rspec-rails", "~> 2.0"
+    gem 'shoulda-matchers'
 end
 
 gem 'jquery-rails'
