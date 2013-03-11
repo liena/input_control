@@ -31,7 +31,7 @@ describe FoosController do
     end
 
     describe "PUT update" do
-        it "should update the user name" do
+        it "should update the Foos name" do
             @foo.name.should_not == "Rails"
             put :update, :id => @foo, :foo => {:name => "Rails"}
             @foo.reload.name.should == "Rails"
